@@ -43,6 +43,7 @@ func main() {
 
 			fmt.Printf("Thank you %v for booking %v tickets , you ll recieve a confirmation email at %v\n", firstname, userTickets, email)
 
+			helper.SendTicket(userTickets, firstname)
 			firstNames := []string{}
 
 			//for loop for array/slice gets index and value

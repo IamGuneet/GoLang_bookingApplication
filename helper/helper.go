@@ -4,6 +4,7 @@ package helper
 import (
 	"fmt"
 	"strings"
+	"time"
 )
 
 // return value types
@@ -47,4 +48,13 @@ func AskUserData() (string, string, string, uint) {
 	fmt.Scan(&userTickets)
 
 	return firstname, lastname, email, userTickets
+}
+
+func SendTicket(tickets uint, name string) {
+	//1o sec delay
+	time.Sleep(10 * time.Second)
+
+	fmt.Println("##################################")
+	fmt.Printf("%v tickets for %v \n", tickets, name)
+	fmt.Println("##################################")
 }
